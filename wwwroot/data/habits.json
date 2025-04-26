@@ -1,0 +1,7 @@
+[
+    { "id": 1, "name": "Drink Water", "description": "Drink 2 liters of water daily", "isComplete": false },
+    { "id": 2, "name": "Walk 5000 Steps", "description": "Walk at least 5k steps", "isComplete": false },
+    { "id": 3, "name": "Read 10 Pages", "description": "Read 10 pages of a book", "isComplete": false }
+  ]
+
+  

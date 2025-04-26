@@ -1,0 +1,34 @@
+﻿@using Habit.Models
+@page "/"
+@inject HttpClient Http
+
+<h1>My Habits</h1>
+
+@if (habits == null)
+{
+    <p>Loading habits....</p>
+}
+else
+{
+    <ul>
+    @foreach (var habit in habits)
+    {
+        <li>
+            <strong>@habit.Name</strong>: @habit.Description
+            @if (habit.IsComplete)
+            {
+                <span>✅</span>
+            }
+        </li>
+    }
+    </ul>
+}
+
+@code {
+    private List<Habit> habits;
+
+    protected override async Task OnInitializedAsync()
+    {
+        habits = await Http.GetFromJsonAsync<List<Habit>>("data/habits.json");
+    }
+}

@@ -1,0 +1,11 @@
+bin/
+obj/
+*.gz
+*.wasm
+*.dll
+*.cache
+*.tmp
+*.pdb
+*.log
+wwwroot/css/bootstrap/
+wwwroot/sample-data/
